@@ -1,6 +1,7 @@
+import "./NasaPicture.css"
 export interface INasaPictureProps {
-    image_src?:string
+  imageUrl?:string
 }
-export function NasaPicture ({image_src = "https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg"}: INasaPictureProps) {
-  return (<img src={image_src} alt="NasaIcon" />);
+export function NasaPicture ({imageUrl}: INasaPictureProps) {
+  return (<img src={imageUrl} alt="NasaIcon" className="nasaImg"/>);
 }

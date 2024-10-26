@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 import { createBrowserRouter, RouterProvider, Router } from 'react-router-dom'
-import { NasaPicture } from './routes/NasaPicture.tsx'
+
 
 const routes = createBrowserRouter([
   {
@@ -11,7 +11,6 @@ const routes = createBrowserRouter([
     children:[
       {
         path: "/",
-        element: <NasaPicture/>
       }
     ]
   }
