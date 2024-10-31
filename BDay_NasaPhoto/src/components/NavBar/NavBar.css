@@ -1,0 +1,40 @@
+.my-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    height: 6vh;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    margin: 0;
+
+    background-color:  rgb(36, 36, 36);
+    border-bottom: 1px solid #87878794;
+}
+.my-nav > *{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.my-h1{
+    color: rgb(255, 255, 255);
+}
+.my-span{
+    padding: 0px 3px 0px 3px;
+    margin-inline: 2px;
+    border-radius: 2px;
+    background-color: white;
+    color:#2C313C;
+}
+.main-button{
+    text-align: center;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 1000px;
+    margin-right: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+}
+.main-button:hover{
+    color: white;
+}

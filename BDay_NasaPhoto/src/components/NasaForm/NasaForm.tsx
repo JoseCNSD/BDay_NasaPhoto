@@ -68,7 +68,7 @@ export function NasaForm(props: INasaFormProps) {
       setTitle(data.title);
       setInfo(data.explanation);
       setHdImgUrl(data.hdurl)
-      console.log(data);
+
 
     } catch (error) {
       console.log(error);
@@ -95,10 +95,10 @@ export function NasaForm(props: INasaFormProps) {
           </div>
           <div className="container-form">
             <div className="container-img">
-              <NasaPicture imageUrl={url === today? "https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg": imgUrl}/>
+              <NasaPicture imageUrl={url === today? "": imgUrl}/>
               <div className="container-buttons"> 
-                <Button download={true} href={hdImgUrl} className={url === today? "valid": "info-btn"} onClick={handleOpen}><InfoRoundedIcon className="info"/></Button>
-                <a download href={hdImgUrl} className={url === today? "valid": "info-btn"} ><DownloadRoundedIcon className="download"/></a>
+                <Button className={url === today? "valid": "info-btn"} onClick={handleOpen}><InfoRoundedIcon className="info"/></Button>
+                <a download target="_blank" href={hdImgUrl} className={url === today? "valid": "info-btn"} ><Button className="info"><DownloadRoundedIcon className="download"/></Button></a>
                   
               </div>
             </div>
