@@ -131,7 +131,7 @@ export function NasaForm(props: INasaFormProps) {
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DemoContainer  components={['DateField']}>
                 <DateField
-                  sx={{'& .MuiOutlinedInput-root fieldset': { borderRadius: '5px 0px 0px 5px', borderColor: 'white' }, '& .MuiOutlinedInput-root:hover fieldset': { borderColor: 'lightgray' }, '& .MuiOutlinedInput-root.Mui-focused fieldset': { borderColor: 'white' } }}
+                  sx={{'& .MuiOutlinedInput-root fieldset': { borderRadius: '5px', borderColor: 'white', height: '100%' }, '& .MuiOutlinedInput-root:hover fieldset': { borderColor: 'lightgray' }, '& .MuiOutlinedInput-root.Mui-focused fieldset': { borderColor: 'white' } }}
                   className="date-field"
                   minDate={firstImgDate}
                   disableFuture
@@ -156,7 +156,7 @@ export function NasaForm(props: INasaFormProps) {
              }} 
              
               // disabled={!isDateValid} 
-            ><ImageSearchIcon className="search"/>              
+            >Buscar<ImageSearchIcon className="search"/>            
             </button>
  
           </div>

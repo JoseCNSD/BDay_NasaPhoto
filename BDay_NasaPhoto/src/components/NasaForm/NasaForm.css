@@ -7,11 +7,12 @@
 /* HTML: <div class="loader"></div> */
 .inputs > *{
     
-    margin: 0!important;
-    padding: 0!important;
+    margin: none!important;
+    padding: 10px 0px 0px 0px!important;
 
 }
 .inputs{
+   
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -20,21 +21,24 @@
     overflow: hidden;
     height: auto;
     box-sizing: border-box;
-
+    gap: 10px;
+    
     
 
 }
 .search{
-    
-    font-size: 3rem!important;
+
+    /* font-size: 2rem!important; */
 }
 .btn-buscar{
-    
-    
+    display: flex;
+    gap: 3px;
+    text-align:center;
+    padding: 10px!important;
     color: #383838;
     background-color: #ffffff;
     border: 2px solid white;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 5px;
 }
 .btn-buscar:hover{
     background-color: #ffffff;
@@ -42,6 +46,17 @@
 
     border: 2px solid white;
 }
+.date-field > *{
+    color: white!important;
+    
+}
+.date-field{
+     
+    display: flex;
+    background-color: transparent;
+    margin-bottom: 7px!important;
+}
+
 .container-form {
     
     height: 100%;
@@ -109,15 +124,7 @@
     color: rgb(255, 255, 255);
     opacity: 1;
 }
-.date-field > *{
-    color: white!important;
-    
-}
-.date-field{
-     
-    display: flex;
-    background-color: transparent;
-}
+
 .erro{
     opacity: 1;
     
@@ -128,7 +135,7 @@
     z-index: -100000;
 }
 .myForm{
-    
+    max-width: 1000px!important;
     /* background-color: red; */
     display: flex;
     flex-direction: column;
@@ -167,15 +174,37 @@ h1{
     text-align: center; 
     font-size: 3rem;
 }
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (max-width: 1370px){
+    section{
+       
+        margin-top: 50px;
+    }
+    .myForm{ 
+        
+        width: 35%;
+    }
+    h1{
+        font-size: 1.3rem;
+    }
+
+ 
+}
 @media only screen and (max-width: 1000px) {
     p{
         font-size: 0.8rem;
     }
     h1{
         text-align: start;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .myForm{
+
+        width: 100%;
         margin: 5px;
     }
     .container-form {

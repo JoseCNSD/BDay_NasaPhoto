@@ -1,0 +1,44 @@
+.my-footer{
+    
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 10vh;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    border-top: 1px solid #87878794;
+}
+
+.my-footer > *{
+    margin: 1px;
+}
+.my-h1{
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+}
+
+.my-footer-anchor{
+    
+    margin-inline: 2px;
+
+    
+    color:#ffffff;
+}
+.my-footer-anchor:hover{
+    
+    margin-inline: 2px;
+
+    color: #ffffff;
+    border-bottom: 1px solid white;
+
+}
+
+.my-p{
+    font-size: 0.75rem;
+}

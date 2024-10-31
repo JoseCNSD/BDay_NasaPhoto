@@ -2,14 +2,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden ;
+  overflow: hidden;
   max-width: 100%;
   max-height: 100vh;
   margin: 0 auto;
 
   text-align: center;
 }
-
+.container-social-media > *{
+  color: white;
+}
+.container-social-media > *:hover{
+  color: rgb(148, 148, 148);
+}
 .logo{
   height: 6em;
   padding: 1.5em;
