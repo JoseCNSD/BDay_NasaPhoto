@@ -17,8 +17,9 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import DownloadRoundedIcon from '@mui/icons-material/DownloadRounded';
+import HdIcon from '@mui/icons-material/Hd';
 import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
+import ImageSearchIcon from '@mui/icons-material/ImageSearch';
 
 export interface INasaFormProps {
 }
@@ -57,6 +58,7 @@ export function NasaForm(props: INasaFormProps) {
     bgcolor: 'black',
     border: '2px solid #000',
     boxShadow: 24,
+    
     p: 4,
   };
   const getData = async () => {
@@ -95,10 +97,11 @@ export function NasaForm(props: INasaFormProps) {
           </div>
           <div className="container-form">
             <div className="container-img">
-              <NasaPicture imageUrl={url === today? "": imgUrl}/>
+              <NasaPicture imageUrl={url === today? "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGQ3bTdha3Y4bjVmcGlwbTRucGJ2cWk2b3A3czNydXAweTJ3YXQ3NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/h8mB9WD5K406EM1wn2/giphy.gif": imgUrl}/>
+              
               <div className="container-buttons"> 
                 <Button className={url === today? "valid": "info-btn"} onClick={handleOpen}><InfoRoundedIcon className="info"/></Button>
-                <a download target="_blank" href={hdImgUrl} className={url === today? "valid": "info-btn"} ><Button className="info"><DownloadRoundedIcon className="download"/></Button></a>
+                <a download target="_blank" href={hdImgUrl} className={url === today? "valid": "info-btn"} ><Button className="info-btn"><HdIcon className="hd"/></Button></a>
                   
               </div>
             </div>
@@ -128,7 +131,7 @@ export function NasaForm(props: INasaFormProps) {
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DemoContainer  components={['DateField']}>
                 <DateField
-                  sx={{ '& .MuiOutlinedInput-root fieldset': { borderColor: 'white' }, '& .MuiOutlinedInput-root:hover fieldset': { borderColor: 'lightgray' }, '& .MuiOutlinedInput-root.Mui-focused fieldset': { borderColor: 'white' } }}
+                  sx={{'& .MuiOutlinedInput-root fieldset': { borderRadius: '5px 0px 0px 5px', borderColor: 'white' }, '& .MuiOutlinedInput-root:hover fieldset': { borderColor: 'lightgray' }, '& .MuiOutlinedInput-root.Mui-focused fieldset': { borderColor: 'white' } }}
                   className="date-field"
                   minDate={firstImgDate}
                   disableFuture
@@ -153,9 +156,7 @@ export function NasaForm(props: INasaFormProps) {
              }} 
              
               // disabled={!isDateValid} 
-            >
-              
-              Buscar
+            ><ImageSearchIcon className="search"/>              
             </button>
  
           </div>

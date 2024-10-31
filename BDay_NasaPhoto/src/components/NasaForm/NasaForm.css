@@ -6,32 +6,45 @@
     margin: auto; */
 /* HTML: <div class="loader"></div> */
 .inputs > *{
-    display: flex;
     
-    margin: 5px;
+    margin: 0!important;
+    padding: 0!important;
+
 }
 .inputs{
-
     display: flex;
     flex-direction: row;
-
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    padding-top: 10px;
+    overflow: hidden;
+    height: auto;
+    box-sizing: border-box;
+
+    
+
+}
+.search{
+    
+    font-size: 3rem!important;
 }
 .btn-buscar{
-    color: #024ed1;
+    
+    
+    color: #383838;
     background-color: #ffffff;
-    border: 1px solid white;
+    border: 2px solid white;
+    border-radius: 0px 5px 5px 0px;
 }
 .btn-buscar:hover{
     background-color: #ffffff;
     transition: 0.1s;
-    color: #024ed1;
-    border: 1px solid white;
+
+    border: 2px solid white;
 }
 .container-form {
-    width: 90%;
-    height: 720px;
+    
+    height: 100%;
     overflow: hidden;
     border: 1px solid #c2c2c2a1;
     border-radius: 7px;
@@ -80,9 +93,7 @@
 .info-btn:focus{
     outline: none;
 }
-.download:hover{
-    opacity: 1;
-}
+
 .info:hover{
     opacity: 1;
 }
@@ -90,14 +101,22 @@
     opacity: 0.5;
     color:#ffffff;
 }
-.download{
+.hd{
+    color: rgb(255, 255, 255);
     opacity: 0.5;
-    color: white;
 }
-
+.hd:hover{
+    color: rgb(255, 255, 255);
+    opacity: 1;
+}
 .date-field > *{
     color: white!important;
     
+}
+.date-field{
+     
+    display: flex;
+    background-color: transparent;
 }
 .erro{
     opacity: 1;

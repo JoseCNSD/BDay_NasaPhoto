@@ -17,8 +17,10 @@
     padding-right: 15px;
 }
 .my-h1{
+    font-size: 1.5rem;
     color: rgb(255, 255, 255);
 }
+
 .my-span{
     padding: 0px 3px 0px 3px;
     margin-inline: 2px;
@@ -26,7 +28,7 @@
     background-color: white;
     color:#2C313C;
 }
-.main-button{
+.today-button{
     text-align: center;
     color: white;
     padding: 7px 10px;
@@ -35,6 +37,27 @@
     background-color: transparent;
     border: 1px solid white;
 }
-.main-button:hover{
+.date-button{
+    text-align: center;
+    color: #2C313C;
+    padding: 7px 10px;
+    border-radius: 1000px;
+    margin-right: 10px;
+    background-color: white;
+    border: 1px solid white;
+}
+.date-button:hover{
+    color: rgb(41, 41, 41);
+    background-color: rgb(255, 255, 255);
+}
+.today-button:hover{
+       
+    background-color: #2C313C;
     color: white;
 }
+@media only screen and (max-width: 1000px) {
+  
+   .my-h1{
+    font-size: 1rem;
+   }
+  }
