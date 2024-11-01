@@ -81,7 +81,7 @@ export function NasaForm(props: INasaFormProps) {
     const fetchData = async () => {
       setDisabled("");
       await getData();
-      setTimeout(() => { setDisabled("disabled") }, 3000);
+      setTimeout(() => { setDisabled("disabled") }, 2500);
     };
     fetchData();
   }, [url]);
@@ -101,14 +101,13 @@ export function NasaForm(props: INasaFormProps) {
               
               <div className="container-buttons"> 
                 <Button className={url === today? "valid": "info-btn"} onClick={handleOpen}><InfoRoundedIcon className="info"/></Button>
-                <a download target="_blank" href={hdImgUrl} className={url === today? "valid": "info-btn"} ><Button className="info-btn"><HdIcon className="hd"/></Button></a>
-                  
+                <a download target="_blank" href={hdImgUrl} className={url === today? "valid": "info-btn"} ><Button className="info-btn"><HdIcon className="hd"/></Button></a>                  
               </div>
             </div>
-            
           </div>
           
           <Modal
+              className="modal"
               open={open}
               onClose={handleClose}
               aria-labelledby="modal-modal-title"

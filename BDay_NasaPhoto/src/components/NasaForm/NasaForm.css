@@ -26,10 +26,7 @@
     
 
 }
-.search{
 
-    /* font-size: 2rem!important; */
-}
 .btn-buscar{
     display: flex;
     gap: 3px;
@@ -166,55 +163,29 @@
     flex-direction: column;  
     text-align: justify; 
 }
+.modal{
+    color: white;
+    text-align: justify;
+}
+
 p{
     font-size: 1rem;
 }
 h1{
+
     margin: 7px;
     text-align: center; 
-    font-size: 3rem;
+    font-size:1.4rem!important;
 }
 section{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-@media only screen and (max-width: 1370px){
-    section{
-       
-        margin-top: 50px;
-    }
-    .myForm{ 
-        
-        width: 35%;
-    }
-    h1{
-        font-size: 1.3rem;
-    }
+/* MEDIA QUERIES */
 
- 
+@media only screen and (max-width: 1920px){
+    h1{
+        font-size: 1.75rem;
+    }
 }
-@media only screen and (max-width: 1000px) {
-    p{
-        font-size: 0.8rem;
-    }
-    h1{
-        text-align: start;
-        font-size: 1.2rem;
-    }
-    .myForm{
-
-        width: 100%;
-        margin: 5px;
-    }
-    .container-form {
-      /* background-color: #ccc; */
-      height: 100%;
-      width: 95%;
-    }
-    .container-img{
-        width: 100%;
-    }
-
-   
-  }

@@ -1,4 +1,9 @@
+body{
+  background-image: url('./public/bg-universe.png');
+  
+}
 #root {
+  
   display: flex;
   justify-content: center;
   align-items: center;

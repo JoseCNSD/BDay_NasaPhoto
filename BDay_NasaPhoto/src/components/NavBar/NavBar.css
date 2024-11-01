@@ -1,8 +1,15 @@
+.container-nav-buttons{
+
+    display: flex;
+    flex-direction: row;
+}
 .my-nav{
 
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
     align-items: center;
     position: absolute;
     height: 6vh;
@@ -15,9 +22,7 @@
     border-bottom: 1px solid #87878794;
 }
 .my-nav > *{
-    
-    padding-left: 15px;
-    padding-right: 15px;
+    margin-inline: 25px;
 }
 .my-h1{
     font-size: 1.5rem;
@@ -59,8 +64,29 @@
     color: white;
 }
 @media only screen and (max-width: 1000px) {
-  
+  .my-nav > *{
+
+  }
+  .my-nav{
+
+    height: 50px;
+
+    
+  }
    .my-h1{
-    font-size: 1rem;
+    font-size: 1.3rem!important;
+   }
+   .container-nav-buttons{
+
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    
+    
+   }
+   .today-button, .date-button{
+    font-size: 0.8rem;
    }
   }

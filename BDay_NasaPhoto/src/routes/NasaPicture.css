@@ -1,11 +1,47 @@
 .nasaImg{
     object-fit: contain;
-    max-width: 450px;
+    max-width: 600px;
     width: 100%;   
     height: 100%;
 }
-@media only screen and (max-width: 1370px){
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1280px){
     .nasaImg{
+        max-width: 340px;
+   
+
+    }
+}
+@media only screen and (max-width: 1000px){
+    .nasaImg{
+
+        max-width: 400px;
+   
+
+    }
+}
+@media only screen and (min-width: 2120px){
+    .nasaImg{
+
+        max-width: 800px;
+   
+
+    }
+}
+@media only screen and (min-width: 2120px){
+    .nasaImg{
+
+        max-width: 800px;
+   
+
+    }
+}
+@media only screen and (min-width: 2560px){
+    .nasaImg{
+
         max-width: 1000px;
+   
+
     }
 }
