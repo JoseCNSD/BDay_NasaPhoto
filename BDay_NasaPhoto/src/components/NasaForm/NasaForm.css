@@ -91,15 +91,17 @@
     border: 2px solid rgb(182, 182, 182);
 }
 .container-buttons{
+    background-color: #24242486;
     top: 1;
     left: 1;
     right: 0;
     bottom: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     position: absolute!important;
     display: flex;
     justify-content: end;
-    width: 100%;    
+    width: 130px; 
+    border-radius: 10px 0px 0px 0px;   
 }
 
 .container-loader{
@@ -184,7 +186,7 @@ p{
     font-size: 1rem;
 }
 h1{
-
+    color: white;
     margin: 7px;
     text-align: center; 
     font-size:1.4rem!important;

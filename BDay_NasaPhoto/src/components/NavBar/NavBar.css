@@ -12,7 +12,7 @@
 
     align-items: center;
     position: absolute;
-    height: 6vh;
+    height: 7vh;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -64,9 +64,7 @@
     color: white;
 }
 @media only screen and (max-width: 1000px) {
-  .my-nav > *{
 
-  }
   .my-nav{
 
     height: 50px;

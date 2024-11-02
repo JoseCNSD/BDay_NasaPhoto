@@ -6,42 +6,38 @@
 }
 /* MEDIA QUERIES */
 
+@media only screen and (max-width: 1000px){
+    .nasaImg{       
+       max-width: 400px;
+    }
+}
 @media only screen and (max-width: 1280px){
     .nasaImg{
         max-width: 340px;
-   
-
     }
 }
-@media only screen and (max-width: 1000px){
-    .nasaImg{
-
+@media only screen and (max-width: 1370px){
+    .nasaImg{       
         max-width: 400px;
-   
-
+    }
+}
+@media only screen and (max-width: 1520px){
+    .nasaImg{
+        max-width: 410px;
     }
 }
 @media only screen and (min-width: 2120px){
     .nasaImg{
-
-        max-width: 800px;
-   
-
+        max-width: 800px;  
     }
 }
 @media only screen and (min-width: 2120px){
     .nasaImg{
-
         max-width: 800px;
-   
-
     }
 }
 @media only screen and (min-width: 2560px){
     .nasaImg{
-
         max-width: 1000px;
-   
-
     }
 }

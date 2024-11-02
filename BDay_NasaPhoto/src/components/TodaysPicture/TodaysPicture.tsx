@@ -4,20 +4,24 @@ import { NasaPicture } from "../../routes/NasaPicture";
 
 import axios from "axios";
 import { Loader } from "../Loader/Loader";
-import { Box, Modal, Typography } from "@mui/material";
-
 import Button from '@mui/material/Button';
-import HdIcon from '@mui/icons-material/Hd';
-import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 
+
+import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import { Box } from "@mui/material";
 
 const apiKey = "OmKd3TuQFb2uV48b870JL5Z3AmXY8GjKxnALBD0N";
-
 
 export interface ITodaysPictureProps {
 }
 
 export function TodaysPicture (props: ITodaysPictureProps) {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const style = {
     position: 'absolute',
     top: '50%',
@@ -44,7 +48,7 @@ export function TodaysPicture (props: ITodaysPictureProps) {
       const data = response.data;
       setUrl(data.hdurl)
       setTitle(data.title)
-      setInfo(data.info)
+      setInfo(data.explanation)
       
     } catch (error) {
       console.log(error);
@@ -61,21 +65,52 @@ export function TodaysPicture (props: ITodaysPictureProps) {
   }, [url]);
   return (
     <>
-      <section className="my-today-section">
+      <section className="myForm-today">
+        <p className="today-p">Esta é a imagem de hoje:</p> 
         <h1>{title}</h1>
-        <div className="container-img">
-          
-          <NasaPicture imageUrl={url}/>
-        </div>
+          <div className="container-form">
             
+            <div className="container-img">
+              
+              <NasaPicture imageUrl={url}/>
+              
+              <div className="container-buttons"> 
+                <Button className="info-btn" onClick={handleOpen}>
+                  <InfoRoundedIcon className="info"/>
+                </Button>
+                <a download target="_blank" href={url} className="info-btn">
+                  <Button className="info-btn">
+                    <VisibilityIcon className="hd"/>
+                  </Button>
+                </a>   
+                              
+              </div>
+              
+              <Modal
+              className="modal" 
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+            >
+              <Box sx={style}>
+                <Typography id="modal-modal-title" variant="h6" component="h2">
+                  <h1>{title}</h1>
+                </Typography>
+                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                 {info}
+                </Typography>
+              </Box>
+            </Modal>
+            </div>
+            
+
+            
+          </div>  
+          
+          <Loader disabled={disabled} />
       </section>
-              
-              
-
-
-
-      <Loader disabled={disabled} />
-      
-    </>
+        
+      </>
   );
 }

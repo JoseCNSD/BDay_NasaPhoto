@@ -17,7 +17,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import HdIcon from '@mui/icons-material/Hd';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 import ImageSearchIcon from '@mui/icons-material/ImageSearch';
 import HelpIcon from '@mui/icons-material/Help';
@@ -30,7 +30,6 @@ export function NasaForm(props: INasaFormProps) {
 
   const [disabled, setDisabled] = useState("");
   const [erro, setErro] = useState("valid");
-  const [valid, setValid] = useState(false);
   const [url, setUrl] = useState(today);
   const [preUrl, setPreUrl] = useState("");
   const [hdImgUrl, setHdImgUrl] = useState("");
@@ -43,16 +42,15 @@ export function NasaForm(props: INasaFormProps) {
 
   const isDateValid = selectedDate ? selectedDate.isAfter(firstImgDate) && selectedDate.isBefore(dayjs().add(1, 'day')) : false;
 
-  // Estados para os modais de Info e Ajuda
   const [openInfoModal, setOpenInfoModal] = useState(false);
   const [openHelpModal, setOpenHelpModal] = useState(false);
 
-  // Funções para abrir e fechar cada modal
   const handleOpenInfoModal = () => setOpenInfoModal(true);
   const handleCloseInfoModal = () => setOpenInfoModal(false);
   const handleOpenHelpModal = () => setOpenHelpModal(true);
   const handleCloseHelpModal = () => setOpenHelpModal(false);
 
+  
   const style = {
     position: 'absolute',
     top: '50%',
@@ -106,7 +104,7 @@ export function NasaForm(props: INasaFormProps) {
                 </Button>
                 <a download target="_blank" href={hdImgUrl} className={url === today ? "valid" : "info-btn"}>
                   <Button className="info-btn">
-                    <HdIcon className="hd"/>
+                    <VisibilityIcon className="hd"/>
                   </Button>
                 </a>                  
               </div>
@@ -190,7 +188,7 @@ export function NasaForm(props: INasaFormProps) {
                 <h1>Por que isso?</h1>
               </Typography>
               <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt iure dignissimos in nisi fuga, voluptate tempora laudantium velit facere vitae autem inventore vel neque? Aliquam suscipit adipisci provident qui nihil.</p>
+                <p>Os arquivos da base de dados da APOD só existem a partir de junho de 1995, então os nascidos antes dessa data não conseguem entrar na nova tendência. </p>
               </Typography>
             </Box>
           </Modal>
